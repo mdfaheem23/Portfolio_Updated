@@ -554,6 +554,12 @@ a { color: inherit; }
     rgba(10,10,10,0.07) 0 8px,
     transparent 8px 16px),
   var(--accent-3); color: var(--paper); }
+.proj-card:nth-child(5) .proj-visual { background:
+  repeating-linear-gradient(45deg,
+    rgba(10,10,10,0.07) 0 8px,
+    transparent 8px 16px),
+  #7dd3fc; }
+.proj-card:nth-child(5) .proj-placeholder { border-color: var(--ink); background: rgba(255,255,255,0.5); color: var(--ink); }
 
 .proj-placeholder {
   border: 2.5px dashed var(--ink);
