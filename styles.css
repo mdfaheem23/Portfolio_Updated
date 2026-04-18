@@ -554,12 +554,65 @@ a { color: inherit; }
     rgba(10,10,10,0.07) 0 8px,
     transparent 8px 16px),
   var(--accent-3); color: var(--paper); }
-.proj-card:nth-child(5) .proj-visual { background:
-  repeating-linear-gradient(45deg,
-    rgba(10,10,10,0.07) 0 8px,
-    transparent 8px 16px),
-  #7dd3fc; }
-.proj-card:nth-child(5) .proj-placeholder { border-color: var(--ink); background: rgba(255,255,255,0.5); color: var(--ink); }
+.vit-papers-visual { background: #05050f !important; overflow: hidden; }
+.vit-papers-mockup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: sans-serif;
+}
+.vit-stars {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, #ffffff88 1px, transparent 1px),
+    radial-gradient(circle, #ffffff55 1px, transparent 1px);
+  background-size: 60px 60px, 120px 120px;
+  background-position: 0 0, 30px 30px;
+  opacity: 0.4;
+}
+.vit-hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  gap: 0;
+}
+.vit-ace, .vit-your {
+  font-size: 30px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1px;
+}
+.vit-exams {
+  font-size: 36px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #a855f7, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+.vit-sub {
+  font-size: 10px;
+  color: #94a3b8;
+  font-family: monospace;
+}
+.vit-btn {
+  background: #7c3aed;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
 
 .proj-placeholder {
   border: 2.5px dashed var(--ink);
