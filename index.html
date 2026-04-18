@@ -464,6 +464,34 @@ document.getElementById('nav-toggle')?.addEventListener('click',()=>{
   document.querySelector('.nav-links')?.classList.toggle('open');
 });
 
+/* ============ CLEAN URL ROUTING ============ */
+(function() {
+  const sectionPaths = { about: '/about', skills: '/skills', projects: '/projects', contact: '/contact' };
+  const pathToId = { '/about': 'about', '/skills': 'skills', '/projects': 'projects', '/contact': 'contact' };
+
+  // Nav clicks: prevent hash jump, smooth scroll, push clean URL
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = link.getAttribute('href').slice(1);
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+      history.pushState(null, '', sectionPaths[id] || '/');
+    });
+  });
+
+  // Scroll: update URL to match whichever section is most visible
+  const secObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) history.replaceState(null, '', sectionPaths[e.target.id] || '/');
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('section[id]').forEach(s => secObs.observe(s));
+
+  // Direct load: if URL is /about etc, scroll to section
+  const targetId = pathToId[location.pathname];
+  if (targetId) document.getElementById(targetId)?.scrollIntoView();
+})();
+
 /* ============ SUBTLE MOUSE PARALLAX ON NAME ============ */
 const heroNames = document.querySelectorAll('.hero h1 .name-bg');
 document.addEventListener('mousemove', (e) => {

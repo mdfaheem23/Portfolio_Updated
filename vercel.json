@@ -3,5 +3,11 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "buildCommand": "",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/about",    "destination": "/index.html" },
+    { "source": "/skills",   "destination": "/index.html" },
+    { "source": "/projects", "destination": "/index.html" },
+    { "source": "/contact",  "destination": "/index.html" }
+  ]
 }
