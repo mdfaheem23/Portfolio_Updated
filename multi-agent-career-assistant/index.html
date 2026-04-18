@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Multi-Agent Career Assistant — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=VT323&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="../index.html" class="topbar-logo" style="text-decoration:none">
+      <span class="logo-badge">MF</span>
+      <span>~/portfolio</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#skills">skills</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../index.html#contact">contact</a>
+    </div>
+    <a href="../index.html#contact" class="nav-cta">Hire me →</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+<main class="shell">
+
+<div class="url-bar">
+  <a href="../index.html">~/portfolio</a>
+  <span class="url-sep">/</span>
+  <span class="url-active">multi-agent-career-assistant</span>
+</div>
+
+  <section class="proj-hero">
+    <a href="../index.html#projects" class="back-link">← back to all projects</a>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="chip pink">AI · Agents</span>
+      <span class="chip yellow">2025</span>
+      <span class="chip">solo build</span>
+    </div>
+
+    <h1 style="font-size:clamp(40px,6vw,72px)">
+      Multi-Agent<br/>
+      <span style="background:var(--accent-1);padding:0 10px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);display:inline-block">Career Assistant</span>
+    </h1>
+
+    <p class="hero-sub" style="margin-top:20px">
+      A role-based multi-agent system for automated career guidance, resume generation, and job-search orchestration — built with LangGraph + Qwen3.
+    </p>
+
+    <div class="proj-hero-visual">
+      <div class="proj-placeholder" style="font-size:18px;padding:32px 40px">
+        [ product hero shot / architecture diagram ]<br/>
+        <small style="opacity:0.6">▸ 1200×600 screenshot placeholder</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-detail">
+    <article class="proj-content">
+      <h3>The problem<span style="color:var(--accent-1)">_</span></h3>
+      <p>Career advice is fragmented — resume building, job search, interview prep, and skill mapping all live in different tools. I wanted a single system where specialized agents collaborate, each owning a slice of the workflow.</p>
+
+      <h3>What I built<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li><strong>Role-based multi-agent architecture</strong> — each agent has a narrow scope (resume, search, interview, skills) and a shared memory layer.</li>
+        <li><strong>Dynamic routing</strong> — LangGraph coordinates handoffs based on conversation state and user intent.</li>
+        <li><strong>Short-term memory</strong> for contextual decisions across turns; long-term memory for user profile + history.</li>
+        <li><strong>Intelligent routing heuristics</strong> to avoid agent overlap and reduce token cost.</li>
+      </ul>
+
+      <h3>Stack<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li>LangGraph for orchestration</li>
+        <li>Qwen3 as the reasoning model</li>
+        <li>Python backend, lightweight React front-end</li>
+        <li>Vector store for long-term memory</li>
+      </ul>
+
+      <h3>Lessons<span style="color:var(--accent-1)">_</span></h3>
+      <p>Multi-agent systems live or die by their routing layer. Good prompts alone aren’t enough — explicit state machines and guardrails beat cleverness every time. Memory design was the biggest win: scoping memory per agent kept answers crisp.</p>
+
+      <div class="ascii-div">─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+
+      <h3>More shots<span style="color:var(--accent-1)">_</span></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="height:200px;border:var(--border-thick);box-shadow:var(--shadow);background:repeating-linear-gradient(45deg,rgba(10,10,10,0.07) 0 8px, transparent 8px 16px),var(--accent-2);display:grid;place-items:center;font-family:'VT323',monospace">
+          [ agent graph ]
+        </div>
+        <div style="height:200px;border:var(--border-thick);box-shadow:var(--shadow);background:repeating-linear-gradient(45deg,rgba(10,10,10,0.07) 0 8px, transparent 8px 16px),var(--accent-3);display:grid;place-items:center;font-family:'VT323',monospace;color:#fff">
+          [ chat UI ]
+        </div>
+      </div>
+    </article>
+
+    <aside class="proj-meta-card">
+      <h4>project.info</h4>
+      <div class="proj-meta-row"><span>year</span><span>2025</span></div>
+      <div class="proj-meta-row"><span>role</span><span>solo</span></div>
+      <div class="proj-meta-row"><span>status</span><span>shipped ✓</span></div>
+      <div class="proj-meta-row"><span>stack</span><span>langgraph</span></div>
+      <div class="proj-meta-row"><span>model</span><span>qwen3</span></div>
+
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+        <a href="https://huggingface.co/spaces/mdfaheem2306/ResumeBuilder_JobScraper_Agent" target="_blank" rel="noopener" class="btn primary" style="justify-content:center">↗ live demo</a>
+        <a href="https://huggingface.co/mdfaheem2306/ResumeBuilder_JobScraper_Agent" target="_blank" rel="noopener" class="btn ghost" style="justify-content:center">↗ huggingface</a>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="contact-card reveal">
+      <h2>Next project →</h2>
+      <p>Check out the Instagram Reel Generator — multi-agent content pipeline.</p>
+      <div class="contact-links">
+        <a href="../instagram-reel-generator/" class="btn yellow">Reel Generator →</a>
+        <a href="../index.html#projects" class="btn ghost">All projects</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Muhammad Faheem</span>
+    <span>← <a href="../index.html" style="text-decoration:underline">home</a></span>
+  </footer>
+</main>
+
+<script>
+const PALETTES = {
+  poppy:    { bg: '#fff8e7', ink: '#0a0a0a', a1: '#ff3ea5', a2: '#ffd60a', a3: '#ff4d2e' },
+  cyber:    { bg: '#eaffea', ink: '#0a0a0a', a1: '#00ff9d', a2: '#ff00e5', a3: '#00d0ff' },
+  sunset:   { bg: '#fff2e0', ink: '#1a0e07', a1: '#ff6b35', a2: '#ffc857', a3: '#e63946' },
+  cream:    { bg: '#fdf6e3', ink: '#2b1d0e', a1: '#d33682', a2: '#b58900', a3: '#cb4b16' },
+  arcade:   { bg: '#1a0b2e', ink: '#fff', a1: '#ff2079', a2: '#ffea00', a3: '#00e1ff' },
+  lime:     { bg: '#f4fdd0', ink: '#0a0a0a', a1: '#ff3366', a2: '#c6ff00', a3: '#7c3aff' },
+};
+document.getElementById('nav-toggle')?.addEventListener('click',()=>{
+  document.querySelector('.nav-links')?.classList.toggle('open');
+});
+try {
+  const stored = localStorage.getItem('portfolio-palette');
+  if (stored && PALETTES[stored]) {
+    const p = PALETTES[stored], r = document.documentElement.style;
+    r.setProperty('--bg', p.bg); r.setProperty('--ink', p.ink);
+    r.setProperty('--accent-1', p.a1); r.setProperty('--accent-2', p.a2); r.setProperty('--accent-3', p.a3);
+  }
+} catch {}
+</script>
+
+</body>
+</html>

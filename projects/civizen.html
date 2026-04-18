@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>CiviZen — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=VT323&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="../index.html" class="topbar-logo" style="text-decoration:none">
+      <span class="logo-badge">MF</span>
+      <span>~/portfolio</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#skills">skills</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../index.html#contact">contact</a>
+    </div>
+    <a href="../index.html#contact" class="nav-cta">Hire me →</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+<main class="shell">
+
+<div class="url-bar">
+  <a href="../index.html">~/portfolio</a>
+  <span class="url-sep">/</span>
+  <a href="../index.html#projects">projects</a>
+  <span class="url-sep">/</span>
+  <span class="url-active">civizen</span>
+</div>
+
+  <section class="proj-hero">
+    <a href="../index.html#projects" class="back-link">← back to all projects</a>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="chip pink">Mobile · Civic Tech</span>
+      <span class="chip yellow">2025</span>
+      <span class="chip">solo build</span>
+    </div>
+
+    <h1 style="font-size:clamp(40px,6vw,72px)">
+      Civi<br/>
+      <span style="background:var(--accent-1);padding:0 10px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);display:inline-block">Zen</span>
+    </h1>
+
+    <p class="hero-sub" style="margin-top:20px">
+      A production-grade civic complaint reporting mobile app. Citizens file geo-tagged complaints with photos; municipal officers manage and resolve them ward by ward. Built with Flutter, Riverpod 2, Supabase, and Firebase.
+    </p>
+
+    <div class="proj-hero-visual">
+      <div class="proj-placeholder" style="font-size:18px;padding:32px 40px">
+        [ CiviZen app screenshots ]<br/>
+        <small style="opacity:0.6">▸ citizen feed · complaint filing · officer dashboard</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-detail">
+    <article class="proj-content">
+      <h3>The problem<span style="color:var(--accent-1)">_</span></h3>
+      <p>Civic complaints in Indian municipalities are often filed on paper or via generic portals with no tracking, no assignment, and no resolution loop. Officers have no real-time visibility; citizens have no accountability. CiviZen closes that loop.</p>
+
+      <h3>What I built<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li><strong>Citizen flow</strong> — File complaints with geo-location, category, description, and photo evidence. Track status in real time.</li>
+        <li><strong>Officer dashboard</strong> — Ward-filtered complaint queue, status updates, and resolution notes. Role-based access via Supabase RLS.</li>
+        <li><strong>Admin panel</strong> — Cross-ward analytics, complaint clustering by AI, officer assignment management.</li>
+        <li><strong>Push notifications</strong> — Firebase Cloud Messaging for status updates on both citizen and officer sides.</li>
+        <li><strong>AI clustering service</strong> — Groups nearby complaints of the same category to surface hotspots to officers.</li>
+        <li><strong>Offline queue</strong> — Hive-backed local cache; complaints filed offline sync when connectivity returns.</li>
+      </ul>
+
+      <h3>Architecture<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li><strong>Clean Architecture</strong> — core / domain / data / presentation layers; zero framework leakage into business logic.</li>
+        <li><strong>Riverpod 2</strong> — StateNotifier, FutureProvider, StreamProvider; provider overrides for DI.</li>
+        <li><strong>Supabase</strong> — PostgreSQL + Row Level Security; storage buckets for media uploads.</li>
+        <li><strong>Firebase</strong> — FCM push notifications; background message handler.</li>
+        <li><strong>go_router</strong> — Declarative routing with role-based guards (citizen / officer / admin).</li>
+      </ul>
+
+      <h3>Stack<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li>Flutter (Dart) — cross-platform iOS &amp; Android</li>
+        <li>Riverpod 2 — state management</li>
+        <li>Supabase (PostgreSQL + Storage)</li>
+        <li>Firebase (FCM)</li>
+        <li>Hive — local cache / offline queue</li>
+        <li>Google Maps + Geolocator</li>
+        <li>OpenAI API — AI complaint clustering</li>
+      </ul>
+
+      <h3>Lessons<span style="color:var(--accent-1)">_</span></h3>
+      <p>RLS policies are the real auth layer — the Flutter app is just a view. Designing ward-scoped data access server-side first made role isolation airtight. AI clustering only earns its complexity if the officer actually acts on the cluster view; I prototyped the UI alongside the service.</p>
+
+      <div class="ascii-div">─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+
+      <h3>More shots<span style="color:var(--accent-1)">_</span></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="height:200px;border:var(--border-thick);box-shadow:var(--shadow);background:repeating-linear-gradient(45deg,rgba(10,10,10,0.07) 0 8px, transparent 8px 16px),var(--accent-2);display:grid;place-items:center;font-family:'VT323',monospace">
+          [ complaint filing screen ]
+        </div>
+        <div style="height:200px;border:var(--border-thick);box-shadow:var(--shadow);background:repeating-linear-gradient(45deg,rgba(10,10,10,0.07) 0 8px, transparent 8px 16px),var(--accent-3);display:grid;place-items:center;font-family:'VT323',monospace;color:#fff">
+          [ officer dashboard ]
+        </div>
+      </div>
+    </article>
+
+    <aside class="proj-meta-card">
+      <h4>project.info</h4>
+      <div class="proj-meta-row"><span>year</span><span>2025</span></div>
+      <div class="proj-meta-row"><span>role</span><span>solo</span></div>
+      <div class="proj-meta-row"><span>platform</span><span>iOS &amp; Android</span></div>
+      <div class="proj-meta-row"><span>status</span><span>shipped ✓</span></div>
+      <div class="proj-meta-row"><span>stack</span><span>Flutter</span></div>
+      <div class="proj-meta-row"><span>backend</span><span>Supabase</span></div>
+      <div class="proj-meta-row"><span>state</span><span>Riverpod 2</span></div>
+
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+        <a href="https://github.com/mdfaheem2306" target="_blank" rel="noopener" class="btn primary" style="justify-content:center">↗ source code</a>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="contact-card reveal">
+      <h2>Back to the index →</h2>
+      <p>See the full project list, or get in touch if you want to collaborate.</p>
+      <div class="contact-links">
+        <a href="../index.html#projects" class="btn yellow">All projects →</a>
+        <a href="../index.html#contact" class="btn ghost">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Muhammad Faheem</span>
+    <span>← <a href="../index.html" style="text-decoration:underline">home</a></span>
+  </footer>
+</main>
+
+<script>
+const PALETTES = {
+  poppy:    { bg: '#fff8e7', ink: '#0a0a0a', a1: '#ff3ea5', a2: '#ffd60a', a3: '#ff4d2e' },
+  cyber:    { bg: '#eaffea', ink: '#0a0a0a', a1: '#00ff9d', a2: '#ff00e5', a3: '#00d0ff' },
+  sunset:   { bg: '#fff2e0', ink: '#1a0e07', a1: '#ff6b35', a2: '#ffc857', a3: '#e63946' },
+  cream:    { bg: '#fdf6e3', ink: '#2b1d0e', a1: '#d33682', a2: '#b58900', a3: '#cb4b16' },
+  arcade:   { bg: '#1a0b2e', ink: '#fff', a1: '#ff2079', a2: '#ffea00', a3: '#00e1ff' },
+  lime:     { bg: '#f4fdd0', ink: '#0a0a0a', a1: '#ff3366', a2: '#c6ff00', a3: '#7c3aff' },
+};
+document.getElementById('nav-toggle')?.addEventListener('click',()=>{
+  document.querySelector('.nav-links')?.classList.toggle('open');
+});
+try {
+  const stored = localStorage.getItem('portfolio-palette');
+  if (stored && PALETTES[stored]) {
+    const p = PALETTES[stored], r = document.documentElement.style;
+    r.setProperty('--bg', p.bg); r.setProperty('--ink', p.ink);
+    r.setProperty('--accent-1', p.a1); r.setProperty('--accent-2', p.a2); r.setProperty('--accent-3', p.a3);
+  }
+} catch {}
+</script>
+
+</body>
+</html>

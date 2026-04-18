@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Personal AI Agent — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=VT323&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="../index.html" class="topbar-logo" style="text-decoration:none">
+      <span class="logo-badge">MF</span>
+      <span>~/portfolio</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#about">about</a>
+      <a href="../index.html#skills">skills</a>
+      <a href="../index.html#projects">projects</a>
+      <a href="../index.html#contact">contact</a>
+    </div>
+    <a href="../index.html#contact" class="nav-cta">Hire me →</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+<main class="shell">
+
+<div class="url-bar">
+  <a href="../index.html">~/portfolio</a>
+  <span class="url-sep">/</span>
+  <a href="../index.html#projects">projects</a>
+  <span class="url-sep">/</span>
+  <span class="url-active">personal-ai-agent</span>
+</div>
+
+  <section class="proj-hero">
+    <a href="../index.html#projects" class="back-link">← back to all projects</a>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px">
+      <span class="chip pink">AI · Automation</span>
+      <span class="chip yellow">2025</span>
+      <span class="chip">solo build</span>
+    </div>
+
+    <h1 style="font-size:clamp(40px,6vw,72px)">
+      Personal<br/>
+      <span style="background:var(--accent-1);padding:0 10px;border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);display:inline-block">AI Agent</span>
+    </h1>
+
+    <p class="hero-sub" style="margin-top:20px">
+      A multi-agent personal assistant for task planning and workflow automation — with short-term and long-term memory, reminders, info lookup, and task execution.
+    </p>
+
+    <div class="proj-hero-visual">
+      <div class="proj-placeholder" style="font-size:18px;padding:32px 40px">
+        [ product hero shot / architecture diagram ]<br/>
+        <small style="opacity:0.6">▸ 1200×600 screenshot placeholder</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="proj-detail">
+    <article class="proj-content">
+      <h3>The problem<span style="color:var(--accent-1)">_</span></h3>
+      <p>Most personal assistants forget you the moment the session ends. I wanted one that learns my patterns, remembers context across weeks, and actually executes tasks — not just suggests them.</p>
+
+      <h3>What I built<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li><strong>Multi-agent assistant</strong> for task planning and workflow automation.</li>
+        <li><strong>Contextual decision-making</strong> using short-term and long-term memory.</li>
+        <li><strong>Features</strong> — reminders, information lookup, and task execution.</li>
+        <li><strong>Extensible architecture</strong> — drop-in agents for new capabilities with scalable autonomous decision support.</li>
+      </ul>
+
+      <h3>Stack<span style="color:var(--accent-1)">_</span></h3>
+      <ul>
+        <li>LangGraph for orchestration</li>
+        <li>Qwen3 as the reasoning model</li>
+        <li>Python backend, lightweight React front-end</li>
+        <li>Vector store for long-term memory</li>
+      </ul>
+
+      <h3>Lessons<span style="color:var(--accent-1)">_</span></h3>
+      <p>Long-term memory is a feature, not a backend. Exposing what the assistant remembers — and letting the user edit it — turned out to be the single biggest trust-builder. Guardrails around task-execution agents were essential.</p>
+
+      <div class="ascii-div">─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+
+      <h3>More shots<span style="color:var(--accent-1)">_</span></h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="height:200px;border:var(--border-thick);box-shadow:var(--shadow);background:repeating-linear-gradient(45deg,rgba(10,10,10,0.07) 0 8px, transparent 8px 16px),var(--accent-2);display:grid;place-items:center;font-family:'VT323',monospace">
+          [ agent graph ]
+        </div>
+        <div style="height:200px;border:var(--border-thick);box-shadow:var(--shadow);background:repeating-linear-gradient(45deg,rgba(10,10,10,0.07) 0 8px, transparent 8px 16px),var(--accent-3);display:grid;place-items:center;font-family:'VT323',monospace;color:#fff">
+          [ chat UI ]
+        </div>
+      </div>
+    </article>
+
+    <aside class="proj-meta-card">
+      <h4>project.info</h4>
+      <div class="proj-meta-row"><span>year</span><span>2025</span></div>
+      <div class="proj-meta-row"><span>role</span><span>solo</span></div>
+      <div class="proj-meta-row"><span>status</span><span>shipped ✓</span></div>
+      <div class="proj-meta-row"><span>stack</span><span>langgraph</span></div>
+      <div class="proj-meta-row"><span>model</span><span>qwen3</span></div>
+
+      <div style="margin-top:16px;display:flex;flex-direction:column;gap:8px">
+        <a href="https://huggingface.co/spaces/mdfaheem2306/agent" target="_blank" rel="noopener" class="btn primary" style="justify-content:center">↗ live demo</a>
+        <a href="https://huggingface.co/spaces/mdfaheem2306/ResumeBuilder_JobScraper_Agent" target="_blank" rel="noopener" class="btn ghost" style="justify-content:center">↗ huggingface</a>
+      </div>
+
+      <p class="hand" style="margin-top:16px;color:var(--accent-3);font-size:18px;text-align:center">
+        ↙ links are placeholders
+      </p>
+    </aside>
+  </section>
+
+  <section class="section">
+    <div class="contact-card reveal">
+      <h2>Back to the index →</h2>
+      <p>See the full project list, or get in touch if you want to collaborate.</p>
+      <div class="contact-links">
+        <a href="../index.html#projects" class="btn yellow">All projects →</a>
+        <a href="../index.html#contact" class="btn ghost">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Muhammad Faheem</span>
+    <span>← <a href="../index.html" style="text-decoration:underline">home</a></span>
+  </footer>
+</main>
+
+<script>
+/* apply stored palette */
+const PALETTES = {
+  poppy:    { bg: '#fff8e7', ink: '#0a0a0a', a1: '#ff3ea5', a2: '#ffd60a', a3: '#ff4d2e' },
+  cyber:    { bg: '#eaffea', ink: '#0a0a0a', a1: '#00ff9d', a2: '#ff00e5', a3: '#00d0ff' },
+  sunset:   { bg: '#fff2e0', ink: '#1a0e07', a1: '#ff6b35', a2: '#ffc857', a3: '#e63946' },
+  cream:    { bg: '#fdf6e3', ink: '#2b1d0e', a1: '#d33682', a2: '#b58900', a3: '#cb4b16' },
+  arcade:   { bg: '#1a0b2e', ink: '#fff', a1: '#ff2079', a2: '#ffea00', a3: '#00e1ff' },
+  lime:     { bg: '#f4fdd0', ink: '#0a0a0a', a1: '#ff3366', a2: '#c6ff00', a3: '#7c3aff' },
+};
+document.getElementById('nav-toggle')?.addEventListener('click',()=>{
+  document.querySelector('.nav-links')?.classList.toggle('open');
+});
+try {
+  const stored = localStorage.getItem('portfolio-palette');
+  if (stored && PALETTES[stored]) {
+    const p = PALETTES[stored], r = document.documentElement.style;
+    r.setProperty('--bg', p.bg); r.setProperty('--ink', p.ink);
+    r.setProperty('--accent-1', p.a1); r.setProperty('--accent-2', p.a2); r.setProperty('--accent-3', p.a3);
+  }
+} catch {}
+</script>
+
+</body>
+</html>

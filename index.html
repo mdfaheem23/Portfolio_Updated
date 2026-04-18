@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Muhammad Faheem — Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=VT323&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================= TOP NAV ================= -->
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="topbar-logo" style="text-decoration:none">
+      <span class="logo-badge">MF</span>
+      <span>~/portfolio</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Hire me →</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+<main class="shell">
+
+<div class="url-bar">
+  <span class="url-active">~/portfolio</span>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div>
+    <span class="hero-eyebrow">◆ online &nbsp;·&nbsp; open to work ◆</span>
+    <h1>
+      hi, i'm<br/>
+      <span class="name-bg">Muhammad</span><br/>
+      <span class="name-bg" style="background:var(--accent-2)">Faheem</span>
+    </h1>
+    <p class="hero-sub">
+      AI workflow engineer &amp; builder. I ship multi-agent
+      systems, experimental interfaces, and the occasional cursed
+      side project.
+    </p>
+    <div class="hero-meta">
+      <span class="chip pink">📍 Vellore, IN</span>
+      <span class="chip yellow">⌁ M.Tech Data Science</span>
+      <span class="chip">⚡ React · LangGraph</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#projects" class="btn primary">See my work →</a>
+      <a href="mailto:muhammedfaheem23feb2020@gmail.com" class="btn ghost">✉ Say hi</a>
+    </div>
+    <p class="hand" style="margin-top:28px; color:var(--accent-3)">
+      ↖ p.s. scroll down, there's a terminal doing its thing →
+    </p>
+  </div>
+
+  <!-- Terminal -->
+  <div class="terminal" id="terminal">
+    <div class="term-bar">
+      <div class="term-dots">
+        <div class="term-dot red"></div>
+        <div class="term-dot yel"></div>
+        <div class="term-dot grn"></div>
+      </div>
+      <div class="term-title">faheem@portfolio — -zsh — 80×24</div>
+    </div>
+    <div class="term-body" id="term-body">
+      <!-- typed in via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>AVAILABLE FOR WORK</span>
+    <span>FRONTEND · AI AGENTS · LANGGRAPH</span>
+    <span>BUILT WITH REACT</span>
+    <span>EST. 2024</span>
+    <span>NOW PLAYING: src/App.tsx</span>
+    <span>AVAILABLE FOR WORK</span>
+    <span>FRONTEND · AI AGENTS · LANGGRAPH</span>
+    <span>BUILT WITH REACT</span>
+    <span>EST. 2024</span>
+    <span>NOW PLAYING: src/App.tsx</span>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="section-hdr reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title">About<span style="color:var(--accent-1)">_</span></h2>
+    <span class="section-kicker">// who is this guy?</span>
+  </div>
+
+  <div class="about">
+    <div class="about-card reveal">
+      <p>
+        I'm a <strong>developer</strong> currently pursuing an
+        Integrated M.Tech in Data Science at VIT Vellore. I'm obsessed
+        with the overlap between <strong>UI design</strong> and
+        <strong>AI orchestration</strong> — building interfaces that feel
+        alive.
+      </p>
+      <p>
+        Lately I've been shipping multi-agent systems with
+        <strong>LangGraph + Qwen3</strong>, and prototyping playful UI
+        in React. Previously core committee at VIT-STELLAR writing about
+        space & tech.
+      </p>
+      <p class="hand" style="color:var(--accent-3); font-size:22px; margin-top:20px">
+        ↳ i like ascii art, keyboard shortcuts, and well-named variables.
+      </p>
+    </div>
+
+    <aside class="about-side reveal">
+      <div class="stat-box">
+        <div class="stat-num">3+</div>
+        <div class="stat-lbl">shipped AI agent projects</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">24/7</div>
+        <div class="stat-lbl">caffeinated & coding</div>
+      </div>
+      <div class="stat-box" style="display:block">
+        <h4 style="font-family:'VT323',monospace;font-size:22px;margin-bottom:6px;">education</h4>
+        <div class="edu-item">
+          <span><strong>VIT Vellore</strong><br/><small>Integrated M.Tech, Data Science</small></span>
+          <span class="edu-year">'24 — '29</span>
+        </div>
+        <div class="edu-item">
+          <span><strong>Notre Dame of Holy Cross</strong><br/><small>Grade 10 & 12</small></span>
+          <span class="edu-year">'17 — '24</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section" id="skills">
+  <div class="section-hdr reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Stack<span style="color:var(--accent-1)">_</span></h2>
+    <span class="section-kicker">// tools i'm fluent in</span>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-card pink reveal">
+      <h4>Languages</h4>
+      <ul class="skill-list">
+        <li>JavaScript</li>
+        <li>TypeScript</li>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <div class="skill-card highlight reveal">
+      <h4>Frameworks</h4>
+      <ul class="skill-list">
+        <li>React.js</li>
+        <li>Next.js</li>
+        <li>Bootstrap</li>
+        <li>Tailwind</li>
+      </ul>
+    </div>
+    <div class="skill-card reveal">
+      <h4>AI / Agents</h4>
+      <ul class="skill-list">
+        <li>LangGraph</li>
+        <li>Qwen3</li>
+        <li>Multi-agent</li>
+        <li>RAG</li>
+        <li>Memory</li>
+      </ul>
+    </div>
+    <div class="skill-card reveal">
+      <h4>Tools</h4>
+      <ul class="skill-list">
+        <li>GSAP</li>
+        <li>Web APIs</li>
+        <li>Git</li>
+        <li>Figma</li>
+        <li>Vercel</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="ascii-div">─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <div class="section-hdr reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Projects<span style="color:var(--accent-1)">_</span></h2>
+    <span class="section-kicker">// things i've built</span>
+  </div>
+
+  <div class="projects-grid">
+    <a href="multi-agent-career-assistant/" class="proj-card reveal">
+      <div class="proj-visual">
+        <div class="proj-placeholder">
+          [ multi-agent system diagram ]<br/>
+          <small>▸ placeholder — drop screenshot here</small>
+        </div>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Multi-Agent Career Assistant</h3>
+        <p class="proj-desc">A role-based multi-agent system for automated career guidance, resume generation, and job-search orchestration.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">LangGraph</span>
+          <span class="proj-tag">Qwen3</span>
+          <span class="proj-tag">Memory</span>
+        </div>
+        <div class="proj-link">
+          <span>read.more()</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="instagram-reel-generator/" class="proj-card reveal">
+      <div class="proj-visual">
+        <div class="proj-placeholder">
+          [ reel-gen pipeline UI ]<br/>
+          <small>▸ placeholder — drop screenshot here</small>
+        </div>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Instagram Reel Generator</h3>
+        <p class="proj-desc">AI-powered reel generation system. Multi-agent workflow for idea generation, scripting, and content structuring.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">LangGraph</span>
+          <span class="proj-tag">Qwen3</span>
+          <span class="proj-tag">Content</span>
+        </div>
+        <div class="proj-link">
+          <span>read.more()</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="personal-ai-agent/" class="proj-card reveal">
+      <div class="proj-visual">
+        <div class="proj-placeholder">
+          [ personal assistant ui ]<br/>
+          <small>▸ placeholder — drop screenshot here</small>
+        </div>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">Personal AI Agent</h3>
+        <p class="proj-desc">A personal assistant for task planning & workflow automation. Short and long-term memory; reminders & lookup.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Agents</span>
+          <span class="proj-tag">Memory</span>
+          <span class="proj-tag">Automation</span>
+        </div>
+        <div class="proj-link">
+          <span>read.more()</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="civizen/" class="proj-card reveal">
+      <div class="proj-visual">
+        <div class="proj-placeholder">
+          [ CiviZen — civic complaint app ]<br/>
+          <small>▸ Flutter · Riverpod · Supabase</small>
+        </div>
+      </div>
+      <div class="proj-body">
+        <h3 class="proj-title">CiviZen</h3>
+        <p class="proj-desc">Production mobile app where citizens file geo-tagged civic complaints and officers resolve them by ward. Clean architecture + AI clustering.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Flutter</span>
+          <span class="proj-tag">Riverpod</span>
+          <span class="proj-tag">Supabase</span>
+        </div>
+        <div class="proj-link">
+          <span>read.more()</span>
+          <span class="arrow">→</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="contact-card reveal">
+    <h2>Let's build<br/>something weird.</h2>
+    <p>
+      Open to internships, freelance work, and interesting collaborations.
+      The fastest way to reach me:
+    </p>
+    <div class="contact-links">
+      <a href="mailto:muhammedfaheem23feb2020@gmail.com" class="btn yellow">✉ email</a>
+      <a href="https://linkedin.com" class="btn ghost">in LinkedIn</a>
+      <a href="tel:+917708976684" class="btn ghost">☎ +91 77089 76684</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Muhammad Faheem · built with ♥ + too much caffeine</span>
+  <span>v1.0.0 · <a href="#" style="text-decoration:underline">view source</a></span>
+</footer>
+
+</main>
+
+<!-- ============ Tweaks panel ============ -->
+<div class="tweaks" id="tweaks">
+  <h5>◆ Palette</h5>
+  <div class="palette-grid" id="palette-grid"></div>
+</div>
+
+<!-- ============ Scripts ============ -->
+<script>
+/* ============ TWEAK DEFAULTS ============ */
+const TWEAK_DEFAULS = /*EDITMODE-BEGIN*/{
+  "palette": "sunset"
+}/*EDITMODE-END*/;
+
+const PALETTES = {
+  poppy:    { name: 'Poppy',    bg: '#fff8e7', ink: '#0a0a0a', a1: '#ff3ea5', a2: '#ffd60a', a3: '#ff4d2e' },
+  cyber:    { name: 'Cyber',    bg: '#eaffea', ink: '#0a0a0a', a1: '#00ff9d', a2: '#ff00e5', a3: '#00d0ff' },
+  sunset:   { name: 'Sunset',   bg: '#fff2e0', ink: '#1a0e07', a1: '#ff6b35', a2: '#ffc857', a3: '#e63946' },
+  cream:    { name: 'Cream',    bg: '#fdf6e3', ink: '#2b1d0e', a1: '#d33682', a2: '#b58900', a3: '#cb4b16' },
+  arcade:   { name: 'Arcade',   bg: '#1a0b2e', ink: '#fff', a1: '#ff2079', a2: '#ffea00', a3: '#00e1ff' },
+  lime:     { name: 'Lime',     bg: '#f4fdd0', ink: '#0a0a0a', a1: '#ff3366', a2: '#c6ff00', a3: '#7c3aff' },
+};
+
+function applyPalette(key) {
+  const p = PALETTES[key] || PALETTES.poppy;
+  const r = document.documentElement.style;
+  r.setProperty('--bg',  p.bg);
+  r.setProperty('--ink', p.ink);
+  r.setProperty('--accent-1', p.a1);
+  r.setProperty('--accent-2', p.a2);
+  r.setProperty('--accent-3', p.a3);
+  document.querySelectorAll('.palette-opt').forEach(el => {
+    el.classList.toggle('active', el.dataset.key === key);
+  });
+}
+
+function buildPaletteGrid() {
+  const grid = document.getElementById('palette-grid');
+  if (!grid) return;
+  grid.innerHTML = Object.entries(PALETTES).map(([k, p]) => `
+    <button class="palette-opt" data-key="${k}">
+      <div class="palette-swatches">
+        <div class="palette-sw" style="background:${p.a1}"></div>
+        <div class="palette-sw" style="background:${p.a2}"></div>
+        <div class="palette-sw" style="background:${p.a3}"></div>
+      </div>
+      ${p.name}
+    </button>
+  `).join('');
+  grid.querySelectorAll('.palette-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.key;
+      applyPalette(key);
+      try { localStorage.setItem('portfolio-palette', key); } catch {}
+      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { palette: key } }, '*');
+    });
+  });
+}
+
+/* Load persisted palette */
+(function init() {
+  buildPaletteGrid();
+  let initial = TWEAK_DEFAULS.palette || 'poppy';
+  try {
+    const stored = localStorage.getItem('portfolio-palette');
+    if (stored && PALETTES[stored]) initial = stored;
+  } catch {}
+  applyPalette(initial);
+})();
+
+/* ============ TWEAKS MODE ============ */
+const tweaksEl = document.getElementById('tweaks');
+window.addEventListener('message', (e) => {
+  if (!e.data) return;
+  if (e.data.type === '__activate_edit_mode')   tweaksEl.classList.add('open');
+  if (e.data.type === '__deactivate_edit_mode') tweaksEl.classList.remove('open');
+});
+window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+
+/* ============ SCROLL REVEAL ============ */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ============ TERMINAL TYPING ============ */
+const termLines = [
+  { t: 'cmd',  html: '<span class="term-prompt">faheem@vit</span> <span class="term-path">~/portfolio</span> $ whoami' },
+  { t: 'out',  html: 'muhammad_faheem — ai workflow engineer' },
+  { t: 'cmd',  html: '<span class="term-prompt">faheem@vit</span> <span class="term-path">~/portfolio</span> $ cat stack.json' },
+  { t: 'out',  html: '{\n  <span class="term-key">"frontend"</span>: [<span class="term-str">"react"</span>, <span class="term-str">"next"</span>, <span class="term-str">"ts"</span>],\n  <span class="term-key">"ai"</span>: [<span class="term-str">"langgraph"</span>, <span class="term-str">"qwen3"</span>],\n  <span class="term-key">"fav_char"</span>: <span class="term-str">"→"</span>,\n  <span class="term-key">"caffeine"</span>: <span class="term-num">9999</span>\n}' },
+  { t: 'cmd',  html: '<span class="term-prompt">faheem@vit</span> <span class="term-path">~/portfolio</span> $ ./run_agent --mode=hire' },
+  { t: 'out',  html: '<span class="term-comment">[✓] agents initialized</span>\n<span class="term-comment">[✓] memory loaded</span>\n<span class="term-comment">[✓] ready to collaborate</span>' },
+  { t: 'cmd',  html: '<span class="term-prompt">faheem@vit</span> <span class="term-path">~/portfolio</span> $ <span class="cursor"></span>' },
+];
+
+const termBody = document.getElementById('term-body');
+let li = 0, ci = 0;
+
+function typeTerminal() {
+  if (li >= termLines.length) return;
+  const current = termLines[li];
+
+  // create line if first char
+  let line = termBody.querySelector(`[data-idx="${li}"]`);
+  if (!line) {
+    line = document.createElement('div');
+    line.className = 'term-line';
+    line.dataset.idx = li;
+    termBody.appendChild(line);
+  }
+
+  // last line — insert cursor directly
+  if (li === termLines.length - 1) {
+    line.innerHTML = current.html;
+    return;
+  }
+
+  // simulate typing: raw.length char by char, but we have HTML.
+  // Strategy: progressively reveal html by showing wrapped spans but walk through text nodes.
+  // Simpler: show full html after a delay per line
+  line.innerHTML = current.html;
+  li++;
+  const delay = current.t === 'cmd' ? 520 : 340;
+  setTimeout(typeTerminal, delay);
+}
+
+// Trigger terminal only when visible
+const termObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      setTimeout(typeTerminal, 400);
+      termObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+termObserver.observe(document.getElementById('terminal'));
+
+/* Mobile nav toggle */
+document.getElementById('nav-toggle')?.addEventListener('click',()=>{
+  document.querySelector('.nav-links')?.classList.toggle('open');
+});
+
+/* ============ SUBTLE MOUSE PARALLAX ON NAME ============ */
+const heroNames = document.querySelectorAll('.hero h1 .name-bg');
+document.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 8;
+  const y = (e.clientY / window.innerHeight - 0.5) * 8;
+  heroNames.forEach((el, i) => {
+    el.style.transform = `translate(${x * (i + 1) * 0.4}px, ${y * (i + 1) * 0.4}px)`;
+  });
+});
+</script>
+
+</body>
+</html>
