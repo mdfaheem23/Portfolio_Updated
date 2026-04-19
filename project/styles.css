@@ -39,6 +39,7 @@ html, body {
   font-size: 16px;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* Grid paper background */
@@ -903,6 +904,9 @@ footer {
   .hero { padding: 28px 0 20px; gap: 24px; }
   .hero-sub { font-size: 17px; }
   .hero-eyebrow { transform: none; }
+
+  /* Prevent topbar shadow from triggering horizontal scroll */
+  .topbar-inner { box-shadow: 4px 4px 0 var(--ink); }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 
@@ -928,6 +932,11 @@ footer {
 
   /* Layout */
   .shell { padding: 12px; }
+
+  /* Hero — prevent name-bg shadow from pushing past viewport */
+  h1 { font-size: clamp(36px, 10vw, 56px); }
+  .hero h1 .name-bg { box-shadow: 4px 4px 0 var(--ink); padding: 0 8px; }
+  .hero-eyebrow { transform: none; }
 
   /* Skills: 1 col */
   .skills-grid { grid-template-columns: 1fr; }
